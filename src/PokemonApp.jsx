@@ -18,7 +18,7 @@ const PokemonApp = () => {
       <hr />
       <span>Loading: {isLoading ? 'true' : 'false'}</span>
       <ul>
-        {pokemons.map(({ name }) => (<li key={name}> {name}</li>))}
+        {pokemons.map(({ name, url }) => (<li key={name}> {name} <img src={url} alt="" /></li>))}
       </ul>
       <button disabled={!isLoading} onClick={() => dispatch(getPokemons(page + 1))}>PAGE</button>
     </>
